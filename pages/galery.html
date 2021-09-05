@@ -53,45 +53,119 @@
     <main>
 
         <section>
-            <h2>Galeria</h2>
-
-            <div class="gallery__wrapper">
-                <div class="gallery__img-wrapper"><img src="../img/galeria1.jpg" alt="Miembros de la banda"></div>
-                <div class="gallery__img-wrapper gallery__img-wrapper--2"><img src="../img/galeria2.jpg"
-                        alt="Miembros de la banda"></div>
-                <div class="gallery__img-wrapper"><img src="../img/galeria3.jpg" alt="Miembros de la banda"></div>
-                <div class="gallery__img-wrapper"><img src="../img/galeria4.jpg" alt="Miembros de la banda"></div>
-                <div class="gallery__img-wrapper gallery__img-wrapper--5"><img src="../img/galeria5.jpg"
-                        alt="Miembros de la banda"></div>
-                <div class="gallery__img-wrapper"><img src="../img/galeria6.jpeg" alt="Miembros de la banda"></div>
-                <div class="gallery__img-wrapper"><img src="../img/galeria7.jpg" alt="Miembros de la banda"></div>
-                <div class="gallery__img-wrapper gallery__img-wrapper--8"><img src="../img/galeria8.jpg"
-                        alt="Miembros de la banda"></div>
-                <div class="gallery__img-wrapper"><img src="../img/galeria9.jpg" alt="Miembros de la banda"></div>
-                <div class="gallery__img-wrapper"><img src="../img/galeria10.jpg" alt="Miembros de la banda"></div>
-                <div class="gallery__img-wrapper"><img src="../img/galeria12.jpg" alt="Miembros de la banda"></div>
-                <div class="gallery__img-wrapper"><img src="../img/galeria11.jpg" alt="Miembros de la banda"></div>
-                <div class="gallery__img-wrapper gallery__img-wrapper--13"><img src="../img/galeria13.jpg"
-                        alt="Miembros de la banda"></div>
-                <div class="gallery__img-wrapper gallery__img-wrapper--14"><img src="../img/galeria14.jpg"
-                        alt="Miembros de la banda"></div>
-
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2>Galeria</h2>
+                    </div>
+                    <div class="col-12">
+                        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                                    class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                                    aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                                    aria-label="Slide 3"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+                                    aria-label="Slide 4"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
+                                    aria-label="Slide 5"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5"
+                                    aria-label="Slide 6"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="6"
+                                    aria-label="Slide 7"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="7"
+                                    aria-label="Slide 8"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="8"
+                                    aria-label="Slide 9"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="9"
+                                    aria-label="Slide 10"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="10"
+                                    aria-label="Slide 11"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="11"
+                                    aria-label="Slide 12"></button>
+                            </div>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="../img/gallery/galeria1.jpg" class="d-block w-100" alt="Miembros de la banda">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/gallery/galeria2.jpg" class="d-block w-100" alt="Miembros de la banda">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/gallery/galeria3.jpg" class="d-block w-100" alt="Miembros de la banda">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/gallery/galeria4.jpg" class="d-block w-100" alt="Miembros de la banda">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/gallery/galeria5.jpg" class="d-block w-100" alt="Miembros de la banda">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/gallery/galeria6.jpg" class="d-block w-100" alt="Miembros de la banda">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/gallery/galeria7.jpg" class="d-block w-100" alt="Miembros de la banda">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/gallery/galeria9.jpg" class="d-block w-100" alt="Miembros de la banda">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/gallery/galeria10.jpg" class="d-block w-100" alt="Miembros de la banda">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/gallery/galeria11.jpg" class="d-block w-100" alt="Miembros de la banda">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/gallery/galeria12.jpg" class="d-block w-100" alt="Miembros de la banda">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/gallery/galeria14.jpg" class="d-block w-100" alt="Miembros de la banda">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button"
+                                data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button"
+                                data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
         <section class="promo">
-            <h2>Síguenos en nuestras redes</h2>
-            
-            <div class="promo__wrapper">
-                <iframe class="promo__youtube" width="60%" height="315" src="https://www.youtube.com/embed/wJ6FMjZkbMI"
-                title="YouTube video player" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen></iframe>
-                
-                <a class="promo__twitter twitter-timeline" data-width="35%" data-height="315" data-theme="dark"
-                href="https://twitter.com/ONEOKROCK_japan?ref_src=twsrc%5Etfw">Tweets by ONEOKROCK_japan</a>
-                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-12">
+                        <h2>Síguenos en nuestras redes</h2>
+                    </div>
+
+                    <div class="col-12 col-lg-9">
+
+                        <iframe class="promo__youtube" width="100%" height="315"
+                            src="https://www.youtube.com/embed/wJ6FMjZkbMI" title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+
+                    </div>
+
+                    <div class="col-12 col-lg-3">
+
+                        <a class="promo__twitter twitter-timeline" data-width="100%" data-height="315" data-theme="dark"
+                            href="https://twitter.com/ONEOKROCK_japan?ref_src=twsrc%5Etfw">Tweets by ONEOKROCK_japan</a>
+                        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                    </div>
+                </div>
             </div>
+
         </section>
 
     </main>
@@ -124,6 +198,10 @@
         </ul>
         <p>©Todos los derechos reservados 2021.</p>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
