@@ -57,7 +57,7 @@ section:nth-of-type(2n+2) {
 }
 
 main {
-    padding-top: 6.3125rem;
+    padding-top: 4rem;
 }
 
 /* Common__Header */
@@ -151,7 +151,7 @@ footer {
 }
 
 .members__item {
-    width: 250px;
+    width: 15.625rem;
 }
 
 .members__item img {
@@ -161,12 +161,70 @@ footer {
 .card {
     height: 100%;
 }
+
 .card h3,
 .card p {
-    color:#0F0731;
+    color: #0F0731;
+}
+
+.members__card {
+    background-color: transparent;
+    width: 15.625rem;
+    height: 15.625rem;
+    perspective: 1000px;
+    animation: glow 0.8s infinite;
+}
+
+.members__card:hover {
+    box-shadow: 0px 0px 0px 0px transparent !important;
+}
+
+.members__card img {
+    width: 100%;
+    height: 100%;
+}
+
+@keyframes glow {
+    0% {
+        box-shadow: 0px 0px 0px 0px rgba(255,255,255,1);  
+    }
+    50% {
+        box-shadow: 0px 0px 20px 0px rgba(255,255,255,1);  
+    }
+}
+
+.members__card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s cubic-bezier(0.53, 0.01, 0.44, 1);
+    transform-style: preserve-3d;
+}
+
+.members__card:hover .members__card-inner {
+    transform: rotateY(180deg);
+}
+
+.members__card-front, .members__card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.members__card-back {
+    background-color: #FFFFFF;
+    color: #212529;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
 }
 
 /* Common__Promo */
+
 .promo__wrapper {
     display: inline-block;
     display: flex;
@@ -174,9 +232,11 @@ footer {
 }
 
 /* Common__Carousel */
+
 .carousel-control-prev {
     background-image: linear-gradient(90deg, #000, transparent);
 }
+
 .carousel-control-next {
     background-image: linear-gradient(270deg, #000, transparent);
 }
@@ -203,27 +263,41 @@ footer {
     bottom: 0;
 }
 
-/* Biography */
-
-.biography__text-wrapper, .biography__img {
-    display: inline-block;
-    width: 44%;
+.banner__scroll-down {
+    position: absolute;
+    bottom: 40px;
+    left: calc(50% - 32px);
+    animation: bounce 2s infinite;
 }
 
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-30px);
+    }
+    60% {
+      transform: translateY(-15px);
+    }
+}
+
+
+/* Biography */
+
 .biography__img {
-    float: right;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 /* Discography */
 
-.discography {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 20px;
-}
-
-.discography__track {
-    list-style: decimal-leading-zero inside;
+@media screen and (min-width: 992px) {
+    .discography__album .nav {
+        min-width: 180px;
+        max-width: 180px;
+    }
 }
 
 /* Galery */
@@ -265,47 +339,77 @@ footer {
 
 /* Contact */
 
-.contact {
-    background-image: url("../img/contact.jpg");
-    background-size: 35%;
-    background-repeat: no-repeat;
-    background-position: right bottom;
-}
-
 .form {
     margin-top: 40px;
-    display: grid;
-    grid-template-columns: 181px 19px 1fr;
-    grid-gap: 4px;
-    max-width: 60%;
-}
-
-.form label {
-    grid-column: 1 / 2;
-}
-
-.form input,
-.form textarea {
-    grid-column: 2/4;
-}
-
-.form input[type="checkbox"] {
-    grid-column: 2/3;
-}
-
-.form label[for="subscription"] {
-    grid-column: 3/4;
 }
 
 .form__submit {
     border: 2px solid #0F0731;
     padding-right: 40px;
     background: url("../img/send-button.png") no-repeat right 5px center;
-    justify-self: start;
 }
-
+ 
 .form__submit:hover, .form__submit:focus {
     background-color: #0F0731;
     background-image: url(../img/send-button-white.png);
     color: #FFFFFF;
+}
+
+.form label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.form input,
+.form textarea {
+    width: 100%;
+    margin-bottom: 0.5rem;
+}
+
+.form input[type="checkbox"] {
+    width: auto;
+}
+
+.form label[for="subscription"] {
+    display: inline;
+}
+
+@media screen and (min-width: 768px) {
+    .form {
+        display: grid;
+        grid-template-columns: 181px 19px 1fr;
+        grid-gap: 4px;
+    }
+    
+    .form label {
+        grid-column: 1 / 2;
+        display: inline;
+    }
+    
+    .form input,
+    .form textarea {
+        grid-column: 2/4;
+        width: auto;
+    }
+    
+    .form input[type="checkbox"] {
+        grid-column: 2/3;
+    }
+    
+    .form label[for="subscription"] {
+        grid-column: 3/4;
+    }
+    
+    .form__submit {
+        justify-self: start;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .contact {
+        background-image: url("../img/contact.jpg");
+        background-size: 35%;
+        background-repeat: no-repeat;
+        background-position: right bottom;
+    }
 }
