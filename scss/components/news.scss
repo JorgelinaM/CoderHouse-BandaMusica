@@ -46,7 +46,7 @@
 
         &--concert {
             grid-area: concerts;
-            width: 100%;
+            @include setWidth(100%);
             margin: 0;
             margin-top: 44px;
         }

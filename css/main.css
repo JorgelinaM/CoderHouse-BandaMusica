@@ -90,19 +90,19 @@
     height: 32px;
     background-image: url("../img/social.png");
     background-repeat: no-repeat; }
-  .social__instagram {
+  .social .social__instagram {
     background-position: -62px -10px; }
-    .social__instagram:hover {
-      background-position: -10px -10px; }
-  .social__spotify {
+  .social .social__spotify {
     background-position: -62px -62px; }
-    .social__spotify:hover {
-      background-position: -10px -62px; }
-  .social__twitter {
+  .social .social__twitter {
     background-position: -114px -62px; }
-    .social__twitter:hover {
-      background-position: -114px -10px; }
-  .social__youtube {
+  .social .social__youtube {
     background-position: -62px -114px; }
-    .social__youtube:hover {
-      background-position: -10px -114px; }
+  .social .social__instagram:hover {
+    background-position: -10px -10px; }
+  .social .social__spotify:hover {
+    background-position: -10px -62px; }
+  .social .social__twitter:hover {
+    background-position: -114px -10px; }
+  .social .social__youtube:hover {
+    background-position: -10px -114px; }

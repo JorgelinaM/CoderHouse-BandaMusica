@@ -1,3 +1,17 @@
+$social-medias: (
+    "instagram": -62px -10px,
+    "spotify": -62px -62px,
+    "twitter": -114px -62px,
+    "youtube": -62px -114px
+);
+
+$social-medias-hover: (
+    "instagram": -10px -10px,
+    "spotify": -10px -62px,
+    "twitter": -114px -10px,
+    "youtube": -10px -114px
+);
+
 .social {
     padding: 0;
 
@@ -24,39 +38,15 @@
         background-repeat: no-repeat;
     }
 
-    &__instagram {
-        background-position: -62px -10px;
-        
-        &:hover {
-            background-position: -10px -10px;
+    @each $name, $value in $social-medias {
+        .social__#{$name} {
+            background-position: $value;
         }
     }
 
-
-    &__spotify {
-        background-position: -62px -62px;
-        
-        &:hover {
-            background-position: -10px -62px;
+    @each $name, $value in $social-medias-hover {
+        .social__#{$name}:hover {
+            background-position: $value;
         }
     }
-
-
-    &__twitter {
-        background-position: -114px -62px;
-        
-        &:hover {
-            background-position: -114px -10px;
-        }
-    }
-
-
-    &__youtube {
-        background-position: -62px -114px;
-        
-        &:hover {
-            background-position: -10px -114px;
-        }
-    }
-
 }

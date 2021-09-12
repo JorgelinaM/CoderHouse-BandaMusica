@@ -6,7 +6,7 @@
     }
 
     &__item {
-        width: 250px;
+        @include setWidth(250px);
 
         img {
             border-radius: 50%;
