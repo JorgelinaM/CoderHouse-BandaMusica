@@ -1,0 +1,74 @@
+.news {
+    text-align: center;
+    display: grid;
+    grid-template-areas: "title title title" 
+                        "subtitle subtitle subtitle" 
+                        "text text text" 
+                        "new1 new2 new3" 
+                        "concerts concerts concerts";
+    justify-content: center;
+    align-items: start;
+    justify-items: center;
+
+    &__title {
+        grid-area: title;
+    }
+
+    &__subtitle {
+        grid-area: subtitle;
+    }
+
+    &__text {
+        grid-area: text;
+    }
+
+    &__item {
+        margin: 20px;
+        display: inline-block;
+        width: 300px;
+        text-align: center;
+
+        &:nth-of-type(1) {
+            grid-area: new1;
+        }
+
+        &:nth-of-type(2) {
+            grid-area: new2;
+        }
+
+        &:nth-of-type(3) {
+            grid-area: new3;
+        }
+
+        h3 {
+            margin-top: 8px;
+        }
+
+        &--concert {
+            grid-area: concerts;
+            width: 100%;
+            margin: 0;
+            margin-top: 44px;
+        }
+    }
+
+    &__concert-dates {
+        margin: auto;
+        border-collapse: collapse;
+        
+        td {
+            padding: 4px 20px;
+        }
+
+        th:nth-of-type(2n + 1),
+        td:nth-of-type(2n + 1) {
+            background-color: $light;
+        }
+    
+        tr:first-child {
+            border-bottom: 1px solid $primary;
+        }
+    }
+
+
+}

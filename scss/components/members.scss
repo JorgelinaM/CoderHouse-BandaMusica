@@ -1,0 +1,15 @@
+.members {
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    &__item {
+        width: 250px;
+
+        img {
+            border-radius: 50%;
+        }
+    }
+}
