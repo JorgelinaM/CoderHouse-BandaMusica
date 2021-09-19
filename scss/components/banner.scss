@@ -1,0 +1,23 @@
+.banner {
+    position: relative;
+    max-height: 100vh;
+    overflow: hidden;
+    padding: pxToRem(54) 0 0;
+    
+    &__scroll-down {
+        position: absolute;
+        bottom: 40px;
+        left: calc(50% - 32px);
+        animation: bounce 2s infinite;
+
+        @include media-breakpoint-down(sm) {
+            display: none;
+        }
+    }
+
+    .social {
+        position: absolute;
+        right: 28px;
+        bottom: 0;
+    }
+}

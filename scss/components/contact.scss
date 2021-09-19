@@ -1,0 +1,8 @@
+.contact {
+    @include media-breakpoint-up(lg) {
+        background-image: url("../img/contact.jpg");
+        background-size: 35%;
+        background-repeat: no-repeat;
+        background-position: right bottom;
+    }
+}

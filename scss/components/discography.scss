@@ -1,0 +1,8 @@
+.discography__album {
+    .nav {
+        @include media-breakpoint-up(lg) {
+            min-width: 180px;
+            max-width: 180px;
+        }
+    }
+}

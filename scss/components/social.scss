@@ -1,0 +1,62 @@
+.social {
+    padding: 0;
+
+    &__item {
+        display: inline;
+        margin: 0 pxToRem(8);
+    }
+
+    span {
+        clip: rect(0 0 0 0);
+        clip-path: inset(50%);
+        height: 1px;
+        overflow: hidden;
+        position: absolute;
+        white-space: nowrap;
+        width: 1px;
+    }
+
+    a {
+        display: inline-block;
+        width: 32px;
+        height: 32px;
+        background-image: url("../img/social.png");
+        background-repeat: no-repeat;
+    }
+
+    &__instagram {
+        background-position: -62px -10px;
+        
+        &:hover {
+            background-position: -10px -10px;
+        }
+    }
+
+
+    &__spotify {
+        background-position: -62px -62px;
+        
+        &:hover {
+            background-position: -10px -62px;
+        }
+    }
+
+
+    &__twitter {
+        background-position: -114px -62px;
+        
+        &:hover {
+            background-position: -114px -10px;
+        }
+    }
+
+
+    &__youtube {
+        background-position: -62px -114px;
+        
+        &:hover {
+            background-position: -10px -114px;
+        }
+    }
+
+}

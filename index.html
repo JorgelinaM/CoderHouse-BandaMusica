@@ -7,11 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ONE OK ROCK</title>
 
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
+    <!-- Header -->
     <header>
         <div class="container-fluid">
             <div class="row">
@@ -49,25 +49,14 @@
 
     <main class="home">
 
+        <!-- Banner -->
         <section class="banner">
             <div class="container-fluid px-0">
                 <div class="row">
                     <div class="col-12">
-
-                        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel"
-                            data-bs-interval="2500" data-bs-pause="false">
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <img src="img/contacto_OOKR8.jpeg" class="d-block w-100" alt="ONE OK ROCK">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="img/Banner.jpg" class="d-block w-100" alt="ONE OK ROCK">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="img/galeria6.jpeg" class="d-block w-100" alt="ONE OK ROCK">
-                                </div>
-                            </div>
-                        </div>
+                        <img src="/img/Banner-xs.jpg"
+                            srcset="/img/Banner-xl.jpg 1900w, /img/Banner-lg.jpg 1200w, ../img/Banner-md.jpg 992w, ../img/Banner-sm.jpg 768w, ../img/Banner-xs.jpg 576w"
+                            class="d-block w-100" alt="ONE OK ROCK">
 
                         <a href="#members" class="banner__scroll-down"><img src="img/down-chevron.png" alt="Ir abajo"></a>
 
@@ -102,7 +91,8 @@
 
         </section>
 
-        <section class="members" id="members">
+        <!-- Members -->
+        <section id="members">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
@@ -156,14 +146,15 @@
             </div>
         </section>
 
-        <section class="news text-center">
+        <!-- News -->
+        <section class="text-center">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-12">
                         <h2>Novedades</h2>
                         <h3>Descubre la música nueva de ONE OK ROCK</h3>
 
-                        <p class="news__text">ONE OK ROCK siempre está trabajando en mejorar la cálidad de sus
+                        <p>ONE OK ROCK siempre está trabajando en mejorar la cálidad de sus
                             composiciones.
                             Enterate de lo últimas novedades y sé el primero en escuchar los nuevos temas.</p>
                     </div>
@@ -263,7 +254,8 @@
             </div>
         </section>
 
-        <section class="promo">
+        <!-- Promo -->
+        <section>
             <div class="container">
                 <div class="row">
 
@@ -293,6 +285,7 @@
 
     </main>
 
+    <!-- Footer -->
     <footer>
         <ul class="social">
             <li class="social__item">
@@ -322,9 +315,7 @@
         <p>©Todos los derechos reservados 2021.</p>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
-        crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
 
 </body>
 
