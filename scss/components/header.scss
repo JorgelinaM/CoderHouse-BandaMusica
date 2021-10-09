@@ -1,4 +1,4 @@
-header {
+.header {
     position: fixed;
     top: 0;
     width: 100%;
@@ -6,4 +6,38 @@ header {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+
+
+    .nav-link.active {
+        color: $secondary !important;
+    }
+
+    &__logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        a {
+        position: relative;
+        color: $white;
+
+            &:before {
+                content: "ONE OK ROCK";
+                position: absolute;
+                margin: auto;
+                left: 0;
+                right: 0;
+                max-width: 400px;
+                color: transparent;
+                letter-spacing: 10px;
+                text-shadow: none;
+            }
+        }
+
+        &:hover a:before {
+            transition: 0.6s ease;
+            color: rgba(255, 255, 255, 0.8);
+            animation: jump-out 0.6s ease forwards;
+        }
+    }
 }

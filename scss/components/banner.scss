@@ -3,21 +3,177 @@
     max-height: 100vh;
     overflow: hidden;
     padding: pxToRem(54) 0 0;
+
+    &__image {
+        display: flex;
+        align-items: center;
+        height: 50vh;
+
+        img {
+            object-fit: cover;
+            height: 100%;
+        }
+    }
     
     &__scroll-down {
         position: absolute;
         bottom: 40px;
+        width: 64px;
         left: calc(50% - 32px);
         animation: bounce 2s infinite;
+        z-index: 10;
+        border-radius: 50%;
+        color: $secondary;
+
+        img {
+            transition: 0.1s transform linear;
+        }
+
+        &:hover img {
+            transform: scale(1.6);
+        }
 
         @include media-breakpoint-down(sm) {
             display: none;
         }
     }
 
-    .social {
-        position: absolute;
-        right: 28px;
-        bottom: 0;
+    .social,
+    &__people {
+        display: none;
+    }
+
+    @include media-breakpoint-up(md) {
+        &__image {
+            height: 75vh;
+        }
+    }
+    
+    @include media-breakpoint-up(lg) {
+        &__image {
+            height: 100vh;
+            width: 100vw;
+            animation: grow 3s infinite cubic-bezier(0.66, 0.04, 0.34, 1.05);
+        }
+
+        .social {
+            display: block;
+            position: absolute;
+            z-index: 10;
+            right: 28px;
+            bottom: 0;
+        }
+
+        &__people {
+            pointer-events: none;
+            display: block;
+        }
+        &__people-img {
+            position: absolute;
+            height: calc(100% + 22vw);
+            width: 100%;
+            
+            &:first-of-type {
+                background: url("../img/people-concert-1.svg") repeat-x bottom / 100%;
+                bottom: -21vw;
+                left: -50%;
+                animation: jump 1s infinite;
+            }
+            
+            &:nth-of-type(2) {
+                background: url("../img/people-concert-2.svg") repeat-x bottom / 100%;
+                bottom: -20vw;
+                left: 50%;
+                animation: jump 0.8s infinite;
+            }
+            
+            &:last-of-type {
+                background: url("../img/people-concert-3.svg") repeat-x bottom / 100%;
+                bottom: -22vw;
+                animation: jump 1.3s infinite;
+            }
+        }
+
+        &__lights-wrapper {
+            pointer-events: none;
+
+            
+            &--right {
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                top: 0;
+                transform: scaleX(-1);
+            }
+        }
+        
+        &__light {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 0px;
+            height: 500%;
+            box-shadow: 0px 0px 18px 7px #d9f5ff;
+            transform-origin: top;
+            animation: laser 3s infinite;
+            
+            &.red {
+                animation: laser 3.5s infinite;
+                box-shadow: 0px 0px 18px 7px #ffd4dd;
+            }
+            &.purple {
+            animation: laser 3.3s infinite;
+            box-shadow: 0px 0px 18px 7px #f8eaff;
+            }
+            &.green {
+                animation: laser 3.7s infinite;
+                box-shadow: 0px 0px 18px 7px #e5ffe2;
+            }
+        }
+
+        &__snow-wrapper {
+            pointer-events: none;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+        }
+
+        &__snow {
+            $total: 200;
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: white;
+            border-radius: 50%;
+        
+            @for $i from 1 through $total {
+                $random-x: random(1000000) * 0.0001vw;
+                $random-offset: random_range(-100000, 100000) * 0.0001vw;
+                $random-x-end: $random-x + $random-offset;
+                $random-x-end-yoyo: $random-x + ($random-offset / 2);
+                $random-yoyo-time: random_range(30000, 80000) / 100000;
+                $random-yoyo-y: $random-yoyo-time * 100vh;
+                $random-scale: random(10000) * 0.0001;
+                $fall-duration: random_range(10, 30) * 1s;
+                $fall-delay: random(30) * -1s;
+            
+                &:nth-child(#{$i}) {
+                    opacity: random(10000) * 0.0001;
+                    transform: translate($random-x, -10px) scale($random-scale);
+                    animation: fall-#{$i} $fall-duration $fall-delay linear infinite;
+                }
+            
+                @keyframes fall-#{$i} {
+                    #{percentage($random-yoyo-time)} {
+                    transform: translate($random-x-end, $random-yoyo-y) scale($random-scale);
+                    }
+            
+                    to {
+                    transform: translate($random-x-end-yoyo, 100vh) scale($random-scale);
+                    }
+                }
+            }
+        }
     }
 }

@@ -1,6 +1,19 @@
 .contact {
-    @include media-breakpoint-up(lg) {
-        background-image: url("../img/contact.jpg");
+    textarea,
+    input[type="tel"],
+    input[type="text"],
+    input[type="email"] {
+        border: none;
+        border-bottom: 1px solid $primary;
+        
+        &:focus {
+            outline: none;
+            border-bottom: 1px solid $secondary;
+        }
+    }
+
+    @include media-breakpoint-up(xl) {
+        background-image: url("../img/contact.png");
         background-size: 35%;
         background-repeat: no-repeat;
         background-position: right bottom;
